@@ -7,9 +7,10 @@ import tw_api
 
 
 def save_to_file(path, data):
-    file_object = open(path, "w")
-    file_object.write(data)
-    file_object.close()
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+
+    with open(path, "w") as f:
+        f.write(data)
 
 
 def parse_arguments():

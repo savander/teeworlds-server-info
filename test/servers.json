@@ -1,0 +1,49 @@
+{
+  "Server": {
+    "address": [
+      "54.38.138.169",
+      8303
+    ],
+    "version": "0.7.5",
+    "name": "! Public EUROPE Vanilla DM",
+    "hostname": "",
+    "map": "dm1",
+    "gametype": "DM",
+    "flags": 0,
+    "skill": 1,
+    "num_players": 2,
+    "max_players": 2,
+    "num_clients": 4,
+    "max_clients": 32,
+    "players": [
+      {
+        "name": "Savander",
+        "clan": "",
+        "country": -1,
+        "score": 0,
+        "player": 1
+      },
+      {
+        "name": "Stiopa",
+        "clan": "PI Academy",
+        "country": 616,
+        "score": -2,
+        "player": 0
+      },
+      {
+        "name": "JeyKey|love",
+        "clan": "ChickenGay",
+        "country": 276,
+        "score": 0,
+        "player": 0
+      },
+      {
+        "name": "BEYBLADE",
+        "clan": "",
+        "country": 276,
+        "score": 0,
+        "player": 1
+      }
+    ]
+  }
+}
