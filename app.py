@@ -34,7 +34,7 @@ def parse_arguments():
     parser.add_argument(
         '-p', '--path',
         dest='path',
-        default='',
+        default=os.getcwd(),
         help='the store path of the servers info file '
              '(`servers.json` by default, can be set via `-f` or `--file` argument)',
     )
@@ -53,13 +53,6 @@ def parse_arguments():
     return parser.parse_args()
 
 
-def get_server_info(server):
-    server = tw_api.Server_Info(server)
-    server.run()
-
-    return server.info
-
-
 def get_servers_info(servers):
     parsed_servers = {}
 
@@ -70,7 +63,7 @@ def get_servers_info(servers):
         address = str(parsed_address[0])
         port = int(parsed_address[1]) if len(parsed_address) > 1 else 8303
 
-        parsed_servers[name] = get_server_info((address, port))
+        parsed_servers[name] = tw_api.get_server_info((address, port))
 
     return parsed_servers
 
