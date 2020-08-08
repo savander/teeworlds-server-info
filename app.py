@@ -5,7 +5,6 @@ import json
 import argparse
 import tw_api
 
-
 def save_to_file(path, data):
     os.makedirs(os.path.dirname(path), exist_ok=True)
 
@@ -40,6 +39,14 @@ def parse_arguments():
     )
 
     parser.add_argument(
+        '-t', '--timeout',
+        dest='timeout',
+        default=2,
+        type=float,
+        help='set a timeout after which script will stop trying to listen for data from the server',
+    )
+
+    parser.add_argument(
         '-s', '--server',
         dest='servers',
         action="append",
@@ -70,6 +77,8 @@ def get_servers_info(servers):
 
 def execute():
     arguments = parse_arguments()
+
+    tw_api.TIMEOUT = arguments.timeout
 
     path = os.path.join(
         arguments.path,
