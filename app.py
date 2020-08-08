@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import json
 import argparse
@@ -12,13 +14,13 @@ def save_to_file(path, data):
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        description='Teeworlds Server Status tool to extract details about list of servers to JSON.',
+        description='Teeworlds Servers Info tool to extract details about servers to JSON.',
     )
 
     parser.add_argument(
         '-v', '--version',
         action='version',
-        version='TW Servers Status v0.1.0',
+        version='TW Servers Info v0.1.0',
     )
 
     parser.add_argument(
@@ -42,6 +44,7 @@ def parse_arguments():
         action="append",
         required=True,
         nargs=2,
+        metavar=('NAME', 'ADDRESS'),
         help='the server name and address with port e.g. `--server "Server01" "127.0.0.1:8303"`',
     )
 
