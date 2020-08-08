@@ -45,7 +45,8 @@ def parse_arguments():
         required=True,
         nargs=2,
         metavar=('NAME', 'ADDRESS'),
-        help='the server name and address with port e.g. `--server "Server01" "127.0.0.1:8303"`',
+        help='the server name and address with port e.g. `--server "Server01" "127.0.0.1:8303"` '
+             'can be used multiple times, to add multiple servers.',
     )
 
     return parser.parse_args()
