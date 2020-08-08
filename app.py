@@ -63,14 +63,13 @@ def get_servers_info(servers):
     parsed_servers = {}
 
     for server in servers:
+        name = str(server[0])
         parsed_address = server[1].split(':')
 
         address = str(parsed_address[0])
         port = int(parsed_address[1]) if len(parsed_address) > 1 else 8303
 
-        server_info = get_server_info((address, port))
-
-        parsed_servers[server[0]] = server_info
+        parsed_servers[name] = get_server_info((address, port))
 
     return parsed_servers
 
