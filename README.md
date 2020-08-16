@@ -2,7 +2,7 @@ Teeworlds Servers Info tool to extract details about servers to JSON.
 
 # Usage
 
-Give list of servers to gather information from and the application with generate file (`servers.json` by default) with server information.
+Pass the list of servers to gather information from. Application will generate file (`servers.json` by default) with server information.
 You can use it futher in other applications.
 
 The port in address `127.0.0.1:<port>` is not required, `8303` will be used by default.
